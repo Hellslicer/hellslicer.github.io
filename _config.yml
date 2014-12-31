@@ -1,17 +1,53 @@
-# Site settings
-title: Hellslicer Github Page
-email: hellslicer@minecorps.fr
-description: > # this means to ignore newlines until "baseurl:"
-  Learn from yesterday, live for today, hope for tomorrow.
-  The important thing is not to stop questioning.
-  -- Albert Einstein
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://hellslicer.github.io" # the base hostname & protocol for your site
-twitter_username: Hellslicer
-github_username:  Hellslicer
+# Site wide configuration
 
-# Build settings
-markdown: kramdown
+title: Hellslicer Github Page
+locale: en_US
+description: Technical blog by Kévin Poirot.
+logo: site-logo.png
+search: true
+url: "http://hellslicer.github.io" 
+
+
+# Jekyll configuration
+
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
 
 kramdown:
-  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..2
+  use_coderay: false
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
+
+
+# Site owner
+owner:
+  name: Kévin Poirot
+  avatar: bio-photo.jpg
+  email: hellslicer@minecorps.fr
+  disqus-shortname: hellslicer-github
+  twitter: hellslicer
+  facebook: #username
+  github: hellslicer
+  stackexchange: #http://stackoverflow.com/users/123456/username
+  linkedin: kévin-poirot/69/a7/889
+  instagram: #username
+  flickr: #username
+  tumblr: #username
+  google:
+    plus: #username
+    analytics:
+    verify:
+    ad-client:
+    ad-slot: 
+  bing-verify:
